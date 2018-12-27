@@ -1,0 +1,12 @@
+=================================GIT Cheatsheet=================================
+
+git init
+git branch
+git status
+git log
+git config --global user.name "Abhishek Banerjee"
+git config --global user.email "aviwinks@yahoo.com"
+git config --local user.name "Avi Banerjee"
+git config --local user.email "Aviwinks@gmail.com"
+git config --global core.editor "code --wait"
+git config --global -e
