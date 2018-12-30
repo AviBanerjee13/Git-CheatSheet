@@ -30,3 +30,19 @@ git config --global color.diff-highlight.newHighlight "green bold 22"
 Git Log
 git log --graph --oneline --decorate
 git log --pretty=format:"%cn commited %h on %cd"
+git log -3 #Limit the number of commits to last 3
+git log --after="2018-12-1"
+git log --after="yesterday"
+git log --after="2018-12-1" --before="2018-12-26"
+git log --author="John"
+git log --author="John\|Mary"
+git log --grep="comment in the commit"
+git log --foo.py bar.py #By File
+git log -S"Hello, World!" #By Content
+git log <since>..<until>
+git log master..feature
+git log --no-merges
+git log --merges
+
+ 
+
