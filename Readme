@@ -13,3 +13,4 @@ git config --global -e
 
 Git Log
 git log --graph --oneline --decorate
+git log --pretty=format:"%cn commited %h on %cd"
