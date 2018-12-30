@@ -10,3 +10,6 @@ git config --local user.name "Avi Banerjee"
 git config --local user.email "Aviwinks@gmail.com"
 git config --global core.editor "code --wait"
 git config --global -e
+
+Git Log
+git log --graph --oneline --decorate
