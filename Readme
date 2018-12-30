@@ -26,3 +26,7 @@ git config --global color.diff-highlight.oldNormal "red bold"
 git config --global color.diff-highlight.oldHighlight "red bold 52"
 git config --global color.diff-highlight.newNormal "green bold"
 git config --global color.diff-highlight.newHighlight "green bold 22"
+
+Git Log
+git log --graph --oneline --decorate
+git log --pretty=format:"%cn commited %h on %cd"
