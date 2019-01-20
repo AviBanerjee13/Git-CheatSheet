@@ -115,19 +115,18 @@ trustExitCode = true
 | logs/debug.log       | logs/debug.log but not debug.log build/logs/debug.log                      | Patterns specifying a file in a particular directory are relative to the repository root. (You can prepend a slash if you like, but it doesn't do anything special.)         |
 ***
 
-* Git Log 
-* git log --graph --oneline --decorate
-* git log --pretty=format:"%cn commited %h on %cd"
-* git log -3 => Limit the number of commits to last 3
-* git log --after="2018-12-1"
-* git log --after="yesterday"
-* git log --after="2018-12-1" --before="2018-12-26"
-* git log --author="John"
-* git log --author="John\|Mary"
-* git log --grep="comment in the commit"
-* git log --foo.py bar.py #By File
-* git log -S"Hello, World!" #By Content
-* git log \<since>..\<until>
-* git log master..feature
-* git log --no-merges
-* git log --merges
+| git log                                                                       | Shows commit history                                                             |
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| git log -n \<limit> / git log -\<limit>                                         | Shows only \<limit> commits                                                           |
+| git log --oneline                                                             | Condenses commit to a single line                                                    |
+| git log --stat                                                                | which files were altered and the relative number of lines that were added or deleted |
+| git log -p                                                                    | Displays the path representing the commits, most detailed view.                      |
+| git log \<filename>                                                            | Displays log for a file                                                              |
+| git log --author="\<pattern>"                                                  | Searches commits with a author name that matches the pattern                         |
+| git log --grep="\<pattern>"                                                    | Searches commits with a commit message that matches the pattern                      |
+| git log -S"Hello, World!"                                                     | Searches commits with content matching the patter("Hello, World!")                   |
+| git log \<since>..\<until>                                                      | Show only commits that occur between \<since> and \<until>                             |
+| git log --after="\<date>"  git log --after="yesterday" git log --before=\<date> | Shows commits after or before a certain date                                         |
+| git log --graph --decorate --oneline                                          | Show a text based graph of the commits on the left hand side of the commit messages  |
+| git log master..feature-branch                                                | Useful for comparing branches                                                        |
+| git log --merges / git log --no-merges                                        | Displays commits with merges or no merges                                            |
