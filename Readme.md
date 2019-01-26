@@ -1,0 +1,2 @@
+# **Readme**
+I needed a GIT cheat sheet for personal use. This is a work in progress. I will add or modify content as and when needed. The information is displayed in tabular form with short bursts of notes in between. It meant to be a bit more comprehensive than most other cheat sheets.
