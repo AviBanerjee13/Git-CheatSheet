@@ -12,8 +12,8 @@
 | git init --seperate-git-dir=\<git dir> | Creates a git repo when the dot files are located in specified directory |
 
 ### *Notes*
-* If you've already run git init on a project directory and it contains a .git subdirectory, you can safely run git init again on the same project directory. It will not override an existing .git configuration.
-* By default, git init will initialize the Git configuration to the .git subdirectory path. The subdirectory path can be modified. Set the $GIT_DIR environment variable to a custom path and git init will initialize the Git configuration files there. Or pass the --separate-git-dir argument for the same result. 
+* You can safely run git init again on the same project directory. It will not override an existing .git configuration.
+* By default, git init will initialize the Git configuration to the .git subdirectory path. The subdirectory path can be modified. Set the $GIT_DIR environment variable to a custom path and git init will initialize the Git configuration files there. Or pass the --separate-git-dir argument for the same result.
 * A common use case for a separate .git subdirectory is to keep your system configuration "dotfiles" (.bashrc, .vimrc, etc.) in the home directory while keeping the .git folder elsewhere.
 * You would create a bare repository to git push and git pull from, but never directly commit to it. Central repositories should always be created as bare repositories and developer local repos are non bare. *eg: **sssh \<user>@\<host> cd path/above/repo git init --bare my-project.git***
 
@@ -86,7 +86,11 @@ trustExitCode = true
 | git config --global alias.br branch   | example of branch alias       |
 | git config --global alias.st status   | example of status alias       |
 | git config --local alias.cm commit    | example of commit alias       |
-
+***
+| git diff                     | Diffing changes                                                                             |
+|------------------------------|---------------------------------------------------------------------------------------------|
+| git diff HEAD \<filename>     | Diffing between local and committed (HEAD is default, can be omitted. filename is optional) |
+| git diff --cached \<filename> | Diffing local and staged changes (filename is optional)                                     |
 ***
 | Saving changes           | Saving changes from working directory to Staging and Repository                                                     |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -130,3 +134,9 @@ trustExitCode = true
 | git log --graph --decorate --oneline                                          | Show a text based graph of the commits on the left hand side of the commit messages  |
 | git log master..feature-branch                                                | Useful for comparing branches                                                        |
 | git log --merges / git log --no-merges                                        | Displays commits with merges or no merges                                            |
+***
+| git tagging                      | A tag is like a branch that doesn’t change. Unlike branches, tags, after being created, have no further history of commits. |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| git tag \<tagname> / git tag v1.1 | Lightweight tag. Less meta data. Usually used for private releases                                                          |
+| git tag -a \<tagname>             | Annotated tag. More metadata. Public releases. Editor opens for entering more information                                   |
+***
